@@ -1,7 +1,6 @@
-
-import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription, DialogHeader } from "@/components/ui/dialog";
+"use client"
 import Image from "next/image";
-
+import { SpotifyWidget } from "@/components/spotifyWidget"
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -14,20 +13,10 @@ export default function Home() {
                   height={200}
                   className="border border-transparent rounded-xl"/>
                 <h2 className="text-white italic md:text-2xl">You are the light in my darkness. The calm of the storm within me.</h2>
-                <Dialog>
-                    <DialogTrigger>Open</DialogTrigger>
-                    <DialogContent>
-                      <DialogHeader>
-                        <DialogTitle>Are you absolutely sure?</DialogTitle>
-                        <DialogDescription>
-                          This action cannot be undone. This will permanently delete your account
-                          and remove your data from our servers.
-                        </DialogDescription>
-                      </DialogHeader>
-                    </DialogContent>
-                </Dialog>
+
         </section>
       </div>
+      <SpotifyWidget />
     </div>
   );
 }
